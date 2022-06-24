@@ -22,3 +22,19 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+/* task-3 */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: aqua;
+}
+.js__item {
+  border: 2px solid red;
+}
+img {
+  display: block;
+}
