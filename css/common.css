@@ -35,6 +35,9 @@ button {
 .js__item {
   border: 2px solid red;
 }
+.js__item:not(:last-of-type){
+  margin-bottom: 20px;
+}
 img {
   display: block;
 }
