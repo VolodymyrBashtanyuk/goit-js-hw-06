@@ -1,32 +1,28 @@
 const getForm = document.querySelector('.login-form');
 
 const getInput = document.querySelectorAll('input')
+
 getInput[0].removeAttribute('type');
 
 
 getForm.addEventListener('submit', onFormSubmit)
+
 function onFormSubmit(event) {
     event.preventDefault();
+    const {
+    elements: { email, password }
+  } = event.currentTarget;
     
-    if (getInput[0].value=== ' ' || !getInput[0].value.includes('@') ) {
+    if (email.value=== ' ' || !email.value.includes('@') ) {
         alert('Enter valid Email')
-    } else if (getInput[1].value === '') {
+    } else if (password.value === '') {
         alert('Enter password')
     } else {
-        const formData = new FormData(event.currentTarget);
-    
-        formData.forEach((name, value) => {
-        console.log('name:',value);
-        console.log('value:', name);
+        console.log(`Email: ${email.value}, Password: ${password.value}`)
         
         getForm.reset();
         
-    });
+    };
     };   
 
-
-    
-    
-
-};
 
