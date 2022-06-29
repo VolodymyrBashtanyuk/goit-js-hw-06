@@ -2,8 +2,7 @@ const getForm = document.querySelector('.login-form');
 
 const getInput = document.querySelectorAll('input')
 
-getInput[0].removeAttribute('type');
-
+// getInput[0].removeAttribute('type'); якщо не прибрати 'type' то коли користувач не поставив '@' браузер показуе невірність напису, а я зробив через 'alert'. 
 
 getForm.addEventListener('submit', onFormSubmit)
 
