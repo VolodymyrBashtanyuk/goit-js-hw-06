@@ -8,10 +8,10 @@ getCreateButton.addEventListener('click', createBoxes);
 function createBoxes(amount){
   amount = Number(getControlAmount.value);
   
-  for (let i = 0; i <= amount; i += 1) {
+  for (let i = 1; i <= amount; i += 1) {
     const createBox = document.createElement("div");
-    createBox.style.width = (30 + i * 10) + "px";
-    createBox.style.height = (30 + i * 10) + "px";
+    createBox.style.width = (20 + i * 10) + "px";
+    createBox.style.height = (20 + i * 10) + "px";
     createBox.style.backgroundColor = getRandomHexColor();
     getColorBox.append(createBox);
   };
