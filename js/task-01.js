@@ -1,18 +1,16 @@
-const onCategories = document.querySelector('#categories');
+const getCategories = document.querySelector('#categories');
+const getElementsItem = document.querySelectorAll('.item');
 
-const isQuantityOfCategories = onCategories.childElementCount;
+const isQuantityOfCategories = getCategories.childElementCount;
 console.log(`Number of categories: ${isQuantityOfCategories}`);
 
-function onItemNameAndQuantityCategories (category) {
-    const categoryItemName = category.firstElementChild.textContent;
-    const categoryItemLength = category.lastElementChild.childElementCount;
+
+getElementsItem.forEach(element => {
+    const categoryItemName = element.firstElementChild.textContent;
+    const categoryItemLength = element.lastElementChild.childElementCount;
 
     console.log(`Category: ${categoryItemName}`);
     console.log(`Elements: ${categoryItemLength}`);
+    
+});
 
-
-}
-
-onItemNameAndQuantityCategories (onCategories.firstElementChild);
-onItemNameAndQuantityCategories (onCategories.children[1]);
-onItemNameAndQuantityCategories (onCategories.lastElementChild);
